@@ -1,0 +1,230 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.imagen{
+    float: left;
+    display: block;
+    margin-left: 20%;
+}
+.text{
+    float: center;
+    color: purple;
+   
+}
+
+/* Estilos para los divs dentro de main */
+.primer, .segundo, .tercer, .cuarto, .quinto, .sexto, .setima, .octava, 
+.novena, .decima, .once, .doce, .trece, .catorce, .quince, .diesiseis, 
+.diesisiete, .funciones, .funciones1, .comparacion, .logical, .MATH, .FECHAS,
+.etiqueta, .clase, .aritmetica ,.cadenas,.arreglos,.dom,.ejercicioDoM{
+    background-color: #F9F3EC;;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 10px 0;
+    width: 90%;
+    max-width: 800px;
+}
+
+/* Estilos específicos para cada div si es necesario */
+.primer h1 {
+    background-color: #F9F3EC;;
+    color: crimson;
+    font-weight: bold;
+    
+}
+
+.segundo h1 {
+    background-color: #F9F3EC;
+    color:cornflowerblue;
+    font-weight: bold;
+}
+
+.tercer h1 {
+    background-color: #F9F3EC;
+    color: darkmagenta;
+    font-weight: bold;
+}
+
+
+
+.primer p, .segundo p, .tercer p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+
+.primer script, .segundo script, .tercer script {
+    margin-top: 20px;
+    font-size: 14px;
+    color: black;
+}
+.cuarto h1{
+    
+        background-color: #F9F3EC;
+        color:cyan;
+        font-weight: bold;
+    
+}
+.quinto h1{
+    background-color: #F9F3EC;
+    color:darkolivegreen;
+    font-weight: bold;
+}
+.sexto h1{
+    background-color: #F9F3EC;
+    color:darkred;
+    font-weight: bold;
+}
+.setima h1{
+    background-color: #F9F3EC;
+    color:coral;
+    font-weight: bold;
+}
+.octava h1{
+    background-color: #F9F3EC;
+    color:deeppink;
+    font-weight: bold;
+}
+.novena h1{
+    background-color: #F9F3EC;
+    color:darkorchid;
+    font-weight: bold;
+}
+.decima h1{
+    background-color: #F9F3EC;
+    color:deepskyblue;
+    font-weight: bold;
+}
+.once h1{
+    background-color: #F9F3EC;
+    color:gold;
+    font-weight: bold;
+}
+.doce h1{
+    background-color: #F9F3EC;
+    color:hotpink;
+    font-weight: bold;
+}
+.trece h1{
+    background-color: #F9F3EC;
+    color:indianred;
+    font-weight: bold;
+}
+.catorce h1{
+    background-color: #F9F3EC;
+    color:lightcoral;
+    font-weight: bold;
+}
+.quince h1{
+    background-color: #F9F3EC;
+    color:lightblue;
+    font-weight: bold;
+}
+.diesiseis h1{
+    background-color: #F9F3EC;
+    color:purple;
+    font-weight: bold;
+}
+.diesisiete h1{
+    background-color: #F9F3EC;
+    color:palevioletred;
+    font-weight: bold;
+}
+.funciones h1{
+    background-color: #F9F3EC;
+    color:mediumvioletred;
+    font-weight: bold;
+}
+.funciones1 h1{
+    background-color: #F9F3EC;
+    color:plum;
+    font-weight: bold;
+}
+.cadenas h1{
+  
+    background-color: #F9F3EC;
+    color:darkolivegreen;
+    font-weight: bold;
+    
+}
+.arreglos h1{
+    background-color:#F9F3EC;
+    color:cadetblue;
+    font-weight: bold;
+}
+.dom h1{
+    background-color: #F9F3EC;
+    color:darkblue;
+    font-weight: bold;
+}
+
+.aritmetica h1{
+ 
+    color:yellowgreen;
+    font-weight: bold;
+    
+}
+.objetos{
+    color: black;
+}
+.comparacion h1{
+    background-color: #F9F3EC;
+    color:darkorange;
+    font-weight: bold;
+}
+.logical h1{
+    background-color: #F9F3EC;
+    color:paleturquoise;
+    font-weight: bold;
+}
+.MATH H1{
+    background-color: #F9F3EC;
+    color:peru;
+    font-weight: bold;
+}
+.FECHAS h1 {
+    background-color: #F9F3EC;
+    color:dodgerblue;
+    font-weight: bold;
+}
+.etiqueta h1{
+    background-color: #F9F3EC;
+    color:darkgoldenrod;
+    font-weight: bold;
+}
+.clase h1{
+    background-color: #F9F3EC;
+    color:firebrick;
+    font-weight: bold;
+}
+.ejercicioDoM h1{
+    background-color: #F9F3EC;
+    color:darkmagenta;
+    font-weight: bold;
+}
+.ejercicioDoM button{
+    background-color:thistle;
+}
+@media (max-width: 768px) {
+    main {
+        padding: 10px;
+    }
+    .primer, .segundo, .tercer, .cuarto, .quinto, .sexto, .setima, .octava, 
+    .novena, .decima, .once, .doce, .trece, .catorce, .quince, .diesiseis, 
+    .diesisiete, .funciones, .funciones1, .comparacion, .logical, .MATH, .FECHAS,
+    .etiqueta, .clase, .cadenas, .arreglos,.dom,.aritmetica,.ejercicioDoM {
+        width: 100%;
+        margin: 10px 0;
+    }
+}

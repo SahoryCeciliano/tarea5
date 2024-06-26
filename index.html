@@ -1,0 +1,901 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Practica</title>
+        <!-- Required meta tags -->
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no"
+        />
+        <link rel="stylesheet" href="style.css">
+        <!-- Bootstrap CSS v5.2.1 -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+            crossorigin="anonymous"
+        />
+    </head>
+
+    <body>
+        <header>
+         <div class="pri">
+           <img class="imagen" src="501a334fb8abe6523fa0e41731cf17d4.jpg" alt="" width="70px" height="70px">
+           <h1 class="text">Trabajo realizado por Nicole Ceciliano</h1>
+         </div>
+        </header>
+        <main>
+
+  <div class="primer">     
+<h1 >primer ejemplo de  if .. else en JavaScript</h2>
+
+<p>Mostrar el saludo dependiendo de la hora:</p>
+
+<p id="demo"></p>
+
+<script>
+const time = new Date().getHours();
+let greeting;
+if (time < 10) {
+  greeting = "Good morning";
+} else if (time < 20) {
+  greeting = "Good day";
+} else {
+  greeting = "Good evening";
+}
+document.getElementById("demo").innerHTML = greeting;
+</script>
+</div> 
+
+
+<div class="segundo">  
+<h1>Segundo ejemplo</h1>
+<p id="resultado"></p>
+<script>
+
+    let edad = 24;
+    let mensaje;
+
+    if (edad < 13) {
+        mensaje = "Eres un niño.";
+    } else if (edad >= 13 && edad < 18) {
+        mensaje = "Eres un adolescente.";
+    } else if (edad >= 18 && edad < 65) {
+        mensaje = "Eres un adulto.";
+    } else {
+        mensaje = "Eres un adulto mayor.";
+    }
+
+    document.getElementById("resultado").innerHTML = mensaje;
+</script>
+</div>
+
+
+
+<div class="tercer">
+<h1>tercer ejemplo</h1>
+<p>Ingresa un Número</p>
+<input type="number" id="numeroInput" placeholder="Ingresa un número">
+<button onclick="capturarNumero()">Guardar Número</button>
+<p id="resultado1"></p>
+<script>
+function capturarNumero() {
+    let edad = Number(document.getElementById("numeroInput").value);
+    
+   
+    
+    
+
+    let mensaje2;
+
+    if (edad < 13) {
+        mensaje2 = "Eres un niño.";
+    } else if (edad >= 13 && edad < 18) {
+        mensaje2 = "Eres un adolescente.";
+    } else if (edad >= 18 && edad < 65) {
+        mensaje2 = "Eres un adulto.";
+    } else {
+        mensaje2 = "Eres un adulto mayor.";
+    }
+
+   
+    document.getElementById("resultado1").innerHTML = mensaje2;
+}
+</script>
+</div>
+
+<div class="cuarto">
+
+<h1>JavaScript switch ejemplo 1</h1>
+<p>primer ejemplo switch</p>
+<p id="demo1"></p>
+
+<script>
+let day;
+switch (new Date().getDay()) {
+  case 0:
+    day = "Domingo";
+    break;
+  case 1:
+    day = "Lunes";
+    break;
+  case 2:
+    day = "Martes";
+    break;
+  case 3:
+    day = "Miercoles";
+    break;
+  case 4:
+    day = "Jueves";
+    break;
+  case 5:
+    day = "Viernes";
+    break;
+  case  6:
+    day = "Sabado";
+}
+document.getElementById("demo1").innerHTML = "Hoy es " + day;
+</script>
+</div>
+
+<div class="quinto">
+    <h1>Segundo ejemplo switch</h1>
+    <p>Ingresa un Número</p>
+    <input type="number" id="numeroInputt" placeholder="Ingresa un número">
+    <button onclick="mostrarResultados()">Guardar Número</button>
+    <p id="resultado2"></p>
+    <script>
+      function mostrarResultados() {
+   
+    let numero = Number(document.getElementById("numeroInputt").value);
+    let mensaje1;
+
+    switch (numero) {
+        case 1:
+            mensaje1 = "Ingresaste el número uno.";
+            break;
+        case 2:
+            mensaje1 = "Ingresaste el número dos.";
+            break;
+        case 3:
+            mensaje1 = "Ingresaste el número tres.";
+            break;
+        default:
+            mensaje1 = "Ingresaste un número diferente a 1, 2 o 3.";
+            break;
+    }
+
+    
+    document.getElementById("resultado2").innerHTML = mensaje1;
+}
+</script>
+
+</div>
+<div class="sexto">
+
+    <h1>Ejemplo de try catch throw</h1>
+    <p>Ingresa tu Correo Electrónico</p>
+    <input type="text" id="emailInput" placeholder="Ingresa tu correo">
+    <button onclick="validarCorreo()">Validar Correo</button>
+    <p id="practico"></p>
+    <script>
+
+
+function validarCorreo() {
+    let email = document.getElementById("emailInput").value;
+    let mensaje;
+
+    try {
+        
+        if (!email) {
+            throw new Error("El campo de correo electrónico no puede estar vacío.");
+        }
+
+      
+        if (!validarFormatoCorreo(email)) {
+            throw new Error("El correo electrónico que ingresaste no es correcto.");
+        }
+
+        mensaje = "Correo electrónico válido: " + email;
+    } catch (error) {
+      
+        mensaje = "Error: " + error.message;
+    }
+
+    document.getElementById("practico").innerText = mensaje;
+}
+
+
+function validarFormatoCorreo(email) {
+  
+    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return regex.test(email);
+}
+
+    </script>
+</div>
+
+
+
+<div class="setima">
+<h1>JavaScript Errores</h1>
+<p>En este ejemplo hemos escrito "alerta" como "adddlert" para producir un error deliberadamente.</p>
+<p>La propiedad de nombre del objeto Error devuelve el nombre del error y la propiedad de mensaje devuelve una descripción del error:</p>
+
+<p id="demo2" style="color:red"></p>
+
+<script>
+try {
+  adddlert("Welcome guest!");
+}
+catch(err) {
+  document.getElementById("demo2").innerHTML = 
+  err.name + "<br>" + err.message;
+}
+</script>
+</div>
+
+
+
+<div class="octava">
+<h1>JavaScript Errores 2</h1>
+
+<p>No puede establecer el número de dígitos significativos de un número en 500:</p>
+
+<p id="demo3" style="color:chocolate">
+
+<script>
+let num = 1;
+try {
+  num.toPrecision(500);
+}
+catch(err) {
+  document.getElementById("demo3").innerHTML = err.name;
+}
+</script>
+
+</div>
+
+<div class="novena">
+    
+<h1>JavaScript Errors 3</h1>
+
+<p>No puede utilizar el valor de una variable inexistente: en este caso y</p>
+
+<p id="demo4"></p>
+
+<script>
+let x = 5;
+try {
+  x = y + 1;
+}
+catch(err) {
+  document.getElementById("demo4").innerHTML = err.name  + "<br>" + err.message;
+}
+</script>
+
+</div>
+
+<div class="decima">
+    
+<h1>JavaScript Errors 4</h1>
+
+<p>error por sintaxis:</p>
+
+<p id="demo5"></p>
+
+<script>
+try {
+  eval("'Hello");
+}
+catch(err) {
+  document.getElementById("demo5").innerHTML = err.name + "<br>" + err.message;
+}
+</script>
+</div>
+
+<div class="once">
+    <h1>JavaScript Errors 5</h1>
+
+<p> Error cuando quieres convertir un número a mayúsculas:</p>
+
+<p id="demo8"></p>
+
+<script>
+num = 1;
+try {
+  num.toUpperCase();
+}
+catch(err) {
+  document.getElementById("demo8").innerHTML = err.name;
+}
+</script>
+
+
+</div>
+
+<div class="doce">
+
+    <h1>JavaScript Errors 6</h1>
+
+    <p>Algunos caracteres no se pueden descodificar mediante URI:</p>
+    
+    <p id="demo7"></p>
+    
+    <script>
+    try {
+      decodeURI("%%%");
+    }
+    catch(err) {
+      document.getElementById("demo7").innerHTML = err.name;
+    }
+    </script>
+    
+</div>
+
+
+<div class="trece">
+<h1>JavaScript For ejercicio 1</h1>
+<p id="demo9"></p>
+
+<script>
+let text = "";
+
+for (let i = 0; i < 5; i++) {
+  text += "el numero es:" + i + "<br>";
+}
+
+document.getElementById("demo9").innerHTML = text;
+</script>
+</div>
+
+
+<div class="catorce">
+<h1>JavaScript For ejercicio 2</h1>
+
+<p id="demo10"></p>
+
+<script>
+const cars = ["SAHORY", "NICOLE", "CECILIANO", "PADILLA"];
+let i, len; 
+text="";
+for (i = 0, len = cars.length, text = ""; i < len; i++) {
+  text += cars[i] + "<br>";
+}
+document.getElementById("demo10").innerHTML = text;
+</script>
+
+</div>
+<div class="quince">
+    <h1>JavaScript While ejercicio 1</h1>
+
+<p id="demo11"></p>
+
+<script>
+ text = "";
+i = 1;
+while (i < 10) {
+  text += "<br> el numero con while es " + i;
+  i++;
+}
+document.getElementById("demo11").innerHTML = text;
+</script>
+</div>
+<div class="diesiseis">
+    <h1>JavaScript Do While ejercicio 2</h1>
+
+    <p id="demo12"></p>
+    
+    <script>
+   text = ""
+   i = 0;
+    
+    do {
+      text += "<br>el numero con do while " + i;
+      i++;
+    }
+    while (i < 10);  
+    
+    document.getElementById("demo12").innerHTML = text;
+    </script>
+</div>
+
+<div class="diesisiete">
+    <h1>JavaScript While ejercicio 3 Materias</h1>
+    <p id="demo13"></p>
+
+    <script>
+    const carss = ["Español", "Estudios Sociales", "Matematica", "Ciencias"];
+    
+   i = 0;
+  text = "";
+    while (carss[i]) {
+      text += carss[i] + "<br>";
+      i++;
+    }
+    
+    document.getElementById("demo13").innerHTML = text;
+    </script>
+   </div>
+
+<div class="funciones">
+    <h1>JavaScript Funciones ejercicio 1</h1>
+
+<p>Invoke (call) a function that converts from Fahrenheit to Celsius:</p>
+<p id="demo14"></p>
+
+<script>
+function toCelsius(f) {
+  return (5/9) * (f-32);
+}
+
+let value = toCelsius(77);
+document.getElementById("demo14").innerHTML = value;
+</script>
+
+</div>
+<div class="funciones1">
+    
+<h1>JavaScript Funciones ejercicio 2</h1>
+<p>Using a function as a variable:</p>
+
+<p id="demo15"></p>
+
+<script>
+ text = "The temperature is " + toCelsius(77) + " Celsius.";
+document.getElementById("demo15").innerHTML = text;
+
+function toCelsius(fahrenheit) {
+  return (5/9) * (fahrenheit-32);
+} 
+</script>
+
+</div>
+<div class="aritmetica">
+    <h1>JavaScript Operadores aritméticos </h1>
+<h2>The += Operator</h2>
+
+<p id="demo16"></p>
+
+<script>
+x = 10;
+x += 5;
+document.getElementById("demo16").innerHTML = x;
+</script>
+<h2>The -= Operator</h2>
+<p id="demo17"></p>
+
+<script>
+   
+    x = 10;
+    x -= 5;
+    document.getElementById("demo17").innerHTML = x;
+    </script>
+<h2>The *= Operator</h2>
+<p id="demo18"></p>
+
+<script>
+   
+    x = 10;
+    x *= 5;
+    document.getElementById("demo18").innerHTML = x;
+    </script>
+
+
+<h2>The /= Operator</h2>
+<p id="demo19"></p>
+
+<script>
+   
+    x = 10;
+    x /= 5;
+    document.getElementById("demo19").innerHTML = x;
+    </script>
+
+<h2>The %= Operator</h2>
+<p id="demo20"></p>
+
+<script>
+   
+    x = 10;
+    x %= 5;
+    document.getElementById("demo20").innerHTML = x;
+    </script>
+
+<h2>The **= Operator</h2>
+<p id="demo21"></p>
+
+<script>
+   
+    x = 10;
+    x **= 5;
+    document.getElementById("demo21").innerHTML = x;
+    </script>
+
+
+</div>
+
+
+
+<div class="comparacion">
+    <h1>JavaScript comparacion</h1>
+
+   
+    
+    <p id="demo22"></p>
+    
+    <script>
+    let text1 = "A";
+    let text2 = "B";
+    let result = text1 < text2;
+    document.getElementById("demo22").innerHTML = "¿Es A menor que B? " + result;
+    </script>
+
+<p id="demo23"></p>
+    
+<script>
+text1 = "A";
+text2 = "B";
+ result = text1 > text2;
+document.getElementById("demo23").innerHTML = "¿Es A mayor que B? " + result;
+</script>
+
+<p id="demo24"></p>
+    
+<script>
+text1 = "A";
+text2 = "B";
+ result = text1 == text2;
+document.getElementById("demo24").innerHTML = "¿Es A igual que B? " + result;
+</script>
+
+
+<p id="demo25"></p>
+    
+<script>
+text1 = "A";
+text2 = "B";
+ result = text1 === text2;
+document.getElementById("demo25").innerHTML = "¿Es A igual que B y el tipo es igual? " + result;
+</script>
+
+
+
+<p id="demo26"></p>
+    
+<script>
+text1 = "A";
+text2 = "B";
+ result = text1 != text2;
+document.getElementById("demo26").innerHTML = "¿Es A diferente que B ? " + result;
+</script>
+
+
+<p id="demo27"></p>
+    
+<script>
+text1 = "A";
+text2 = "B";
+ result = text1 >= text2;
+document.getElementById("demo27").innerHTML = "¿Es A mayor qué o igual a B ? " + result;
+</script>
+
+
+<h1>EL () ? : Ternary Operator</h1>
+
+<p>Ingrese su edad y haga clic en el botón:</p>
+
+<input id="age" value="18" />
+
+<button onclick="myFunction1()">Try it</button>
+
+<p id="demo31"></p>
+
+<script>
+function myFunction1() {
+  let age = document.getElementById("age").value;
+  let voteable = (age < 18) ? "MUY JOVEN":"ADECUADO";
+  document.getElementById("demo31").innerHTML = voteable + " PARA VOTAR.";
+}
+</script>
+</div>
+
+<div class="logical">
+  <h1>The && Operator (Logical AND)</h1>
+    <p>El operador && devuelve verdadero si ambas expresiones son verdaderas; de lo contrario, devuelve falso.</p>
+    
+    <p id="demo28"></p>
+    
+    <script>
+   x = 6;
+    let y = 3;
+    
+    document.getElementById("demo28").innerHTML = 
+    (x < 10 && y > 1) + "<br>" + 
+    (x < 10 && y < 1);
+    </script>
+
+
+    <h1>The || Operator (Logical OR)</h1>
+    <p>El || Devuelve verdadero si una o ambas expresiones son verdaderas; en caso contrario, devuelve falso.</p>
+    
+    <p id="demo29"></p>
+    
+    <script>
+  x = 6;
+  y = 3;
+    
+    document.getElementById("demo29").innerHTML = 
+    (x == 5 || y == 5) + "<br>" + 
+    (x == 6 || y == 0) + "<br>" + 
+    (x == 0 || y == 3) + "<br>" + 
+    (x == 6 || y == 3);
+    </script>
+    <h1>El operador NOT (!)</h1>
+
+    <p>El operador NOT (!) devuelve verdadero para declaraciones falsas y falso para declaraciones verdaderas.</p>
+
+<p id="demo30"></p>
+
+<script>
+x = 6;
+y = 3;
+
+document.getElementById("demo30").innerHTML = 
+!(x === y) + "<br>" + 
+!(x > y);
+</script>
+
+</div>
+<DIV class="MATH">
+  <h1>MATH</h1>
+    <p>Math.PI devuelve la relación entre la circunferencia de un círculo y su diámetro:</p>
+    <P>Math.E devuelve el número de Euler</P>
+    <P>devuelve la raíz cuadrada de 2</P>
+    <P>devuelve el logaritmo natural de 2</P>
+<p id="demo32"></p>
+
+<script>
+document.getElementById("demo32").innerHTML = Math.PI +"  EULER "+Math.E +"  RAIZ CUADRADA "+Math.SQRT2 +"  LOGARITMO "+Math.LN2;
+</script>
+
+
+
+
+<p>Math.round(x) devuelve el valor de x redondeado a su entero más cercano:</p>
+
+<p id="demo33"></p>
+
+<script>
+document.getElementById("demo33").innerHTML = Math.round(4.5);
+</script>
+
+
+<p>Math.floor(x) devuelve el valor de x redondeado hacia abajo al entero más cercano:</p>
+<P>Math.trunc(x) devuelve la parte entera de x:</P>
+<P>Math.sign(x) devuelve si x es negativo, nulo o positivo</P>
+<P>Math.pow(x, y) devuelve el valor de x elevado a y:</P>
+<P>Math.sqrt(x) devuelve la raíz cuadrada de x:</P>
+<P>Math.abs(x) devuelve el valor absoluto (positivo) de x:</P>
+<P>Math.min() y Math.max() se pueden utilizar para encontrar el valor más bajo o más alto en una lista de argumentos:</P>
+
+<p id="demo34"></p>
+
+<script>
+document.getElementById("demo34").innerHTML ="FLOOR "+ Math.floor(4.7) +" TRUNC  "+Math.trunc(4.7)+" SIGN "+Math.sign(-4)+ " POW  "+Math.pow(8, 2)+" SQRT  "+Math.sqrt(64)+" ABS  "+Math.abs(-4.7)+" MIN  "+Math.min(0, 150, 30, 20, -8, -200);
+</script>
+
+</DIV>
+
+<DIV class="FECHAS">
+    <h1>JavaScript FECHAS</h1>
+    <p id="demo35"></p>
+    <script>
+    let elementoFechaHora = document.getElementById("demo35");
+
+ 
+    let fechaActual = new Date();
+    
+  
+    let año = fechaActual.getFullYear();
+    let mes = fechaActual.getMonth() + 1; 
+    let dia = fechaActual.getDate();
+    let horas = fechaActual.getHours();
+    let minutos = fechaActual.getMinutes();
+    let segundos = fechaActual.getSeconds();
+    
+   
+    let cadenaFechaHora = `Fecha y Hora Actual: ${dia}/${mes}/${año} ${horas}:${minutos}:${segundos}`;
+    elementoFechaHora.textContent = cadenaFechaHora;
+</script>
+
+</DIV>
+<div class="cadenas">
+<h1>cadenas literales</h1>
+<p>Las cadenas se escriben entre comillas. Puede utilizar comillas simples o dobles:</p>
+
+<p id="demo36"></p>
+
+<script>
+let carName1 = "Nicole Ceciliano"; 
+let carName2 = 'Nicole Ceciliano'; 
+
+document.getElementById("demo36").innerHTML =
+carName1 + " " + carName2; 
+</script>
+<p>Con comillas invertidas, puedes usar comillas simples y dobles dentro de una cadena:</p>
+
+<p id="demo37"></p>
+
+
+<script>
+text = `el' es a menudo llamado "Juan"`;
+document.getElementById("demo37").innerHTML = text;
+</script>
+
+
+
+</div>
+
+<div class="arreglos">
+    <h1>JavaScript Arreglos</h1>
+
+<p id="demo39"></p>
+
+<script>
+cars1 = ["San Jose", "Alajuela", "Cartago"];
+document.getElementById("demo39").innerHTML = cars1;
+</script>
+
+<h1>JavaScript Arreglos solo el seleccionado</h1>
+<p id="demo40"></p>
+
+<script>
+const cars2 = ["primero", "segundo", "tercero"];
+document.getElementById("demo40").innerHTML = cars2[2];
+</script>
+
+
+
+<p id="demo41"></p>
+
+<script>
+    <h1>El método toString() devuelve una matriz como una cadena separada por comas:</h1>
+const fruits = ["uvas", "bananos", "sandia", "Mango"];
+document.getElementById("demo41").innerHTML = fruits.toString();
+</script>
+<h1>The Int8rray Objeto</h1>
+
+<p id="demo42"></p>
+
+<script>
+const myArr = new Int8Array(8);
+document.getElementById("demo42").innerHTML = myArr;
+</script>
+<h1>The Int32Array Object</h1>
+
+<p id="demo43"></p>
+
+<script>
+const myArr2 = new Int32Array(10);
+document.getElementById("demo43").innerHTML = myArr2;
+</script>
+<h1>The Uint32Array Object</h1>
+
+<p id="demo44"></p>
+
+<script>
+const myArr3 = new Uint32Array(10);
+document.getElementById("demo44").innerHTML = myArr3;
+</script>
+
+
+<h1>The BigUint64Array Object</h1>
+
+<p id="demo45"></p>
+
+<script>
+const myArr4 = new BigUint64Array(10);
+document.getElementById("demo45").innerHTML = myArr4;
+</script>
+
+
+
+</div>
+<div class="dom">
+    <h1 id="cedula">Cedula</h1>
+    <p id="mensaje">mensaje</p>
+    <button id="boton">Haz clic</button>
+    <script>
+    // Esperar a que el DOM esté completamente cargado
+document.addEventListener("DOMContentLoaded", function() {
+    
+    let titulo = document.getElementById("cedula");
+    let parrafo = document.getElementById("mensaje");
+    let boton = document.getElementById("boton");
+
+    
+    titulo.textContent = "305230355";
+    parrafo.textContent = "La cedula ha sido modificada";
+
+   
+    boton.addEventListener("click", function() {
+        alert("Nicole Ceciliano");
+    });
+});
+
+</script>
+
+</div>
+
+<div class="etiqueta">
+    <h1>Ejemplo de Contar Etiquetas</h1>
+    
+    <button onclick="contarEtiquetas('p')">Contar P</button>
+    <button onclick="contarEtiquetas('div')">Contar Divs</button>
+    <p id="resultados"></p>
+
+    <script>
+        function contarEtiquetas(tagName) {
+            
+            let elementos = document.getElementsByTagName(tagName);
+
+          
+            let total = elementos.length;
+
+         
+            document.getElementById('resultados').textContent = `Total de <${tagName}>: ${total}`;
+        }
+    </script>
+</div>
+<div class="clase">
+  <h1>ejercicio con clases</h1>
+    <div class="mi-clase">Elemento 1</div>
+    <div class="mi-clase">Elemento 2</div>
+    <div class="mi-clase">Elemento 3</div>
+    <div class="otra-clase">Elemento 4</div>
+    <div class="mi-clase">Elemento 5</div>
+    <div class="mi-clase">Elemento 6</div>
+    <!-- Lugar para mostrar el total de elementos encontrados -->
+    <div id="total-elementos"></div>
+
+    <script>
+       
+        let elementos = document.getElementsByClassName('mi-clase');
+
+       
+        let totalElementosDiv = document.getElementById('total-elementos');
+        totalElementosDiv.textContent = "Total de elementos con el nombre de la clase igual a 'mi-clase' es de: " + elementos.length;
+        </script>
+</div>
+<div class="ejercicioDoM">
+  <div id="contenedor">
+    <h1>Ejercicio de DOM</h1>
+    <p class="textopr">Este es un párrafo INICIAL.</p>
+</div>
+<button id="agregar">Agregar</button>
+<button id="modificar">Modificar</button>
+<button id="eliminar">Eliminar</button>
+<button id="cambiarColor">Cambiar color</button>
+  <script src="index.js"></script>
+</div>
+
+        </main>
+        <footer>
+           
+        </footer>
+       
+        <script
+            src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+            integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+            crossorigin="anonymous"
+        ></script>
+
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+            integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+            crossorigin="anonymous"
+        ></script>
+    </body>
+</html>
